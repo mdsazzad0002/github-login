@@ -15,9 +15,10 @@ Then go to `index.php` manipulate `$userDate` this is array
 
 Also save image from url 
 ```php
-    if(!empty($gitUserData['picture'])){
-        $inPath =   $gitUserData['picture'];
-        $outPath = 'image.jpg';
+     $outPath ='';
+    if(!empty($git_picture)){
+        $inPath =   $git_picture;
+        $outPath = '../../assets/images/'.$git_id.$git_username.'.jpg';
         $git->save_image($inPath, $outPath);
 
     }
